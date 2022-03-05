@@ -22,4 +22,10 @@ public class BasicLinageTests {
         double actual = BasicLinage.valueOfFunctionWithDouble(2, 3, 4);
         Assertions.assertEquals(-22.48576465145604, actual);
     }
+
+    @Test
+    public void valueOfFunctionSinCosTgShouldReturnResultWhenThereAreMeanings() {
+        double actual = BasicLinage.valueOfFunctionSinCosTg(30, 30);
+        Assertions.assertEquals(-10.994069641154754,actual);
+    }
 }
