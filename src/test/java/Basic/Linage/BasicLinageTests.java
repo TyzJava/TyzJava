@@ -28,4 +28,10 @@ public class BasicLinageTests {
         double actual = BasicLinage.valueOfFunctionSinCosTg(30, 30);
         Assertions.assertEquals(-10.994069641154754,actual);
     }
+
+    @Test
+    public void swappingShouldSwapTheFractionAndIntegerPartOfNumberWhenThereIsARealNumber() {
+        double actual = BasicLinage.swapping(123.456);
+        Assertions.assertEquals(456.123, actual);
+    }
 }

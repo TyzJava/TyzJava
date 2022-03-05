@@ -13,4 +13,10 @@ public class BasicLinage {
     public static double valueOfFunctionSinCosTg(double x, double y) {
         return (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(x * y);
     }
+
+    public static double swapping(double r) {
+        int n = (int) r;
+        double m = r - n;
+        return (int) (m * 1000) + (double) n / 1000;
+    }
 }
