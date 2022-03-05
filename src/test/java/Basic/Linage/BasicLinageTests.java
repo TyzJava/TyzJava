@@ -34,4 +34,10 @@ public class BasicLinageTests {
         double actual = BasicLinage.swapping(123.456);
         Assertions.assertEquals(456.123, actual);
     }
+
+    @Test
+    public void conversionToHorseShouldReturnTimeWhenValueIsSeconds() {
+        String actual = BasicLinage.conversionToHorse(123456);
+        Assertions.assertEquals("34ч 17мин 36с", actual);
+    }
 }

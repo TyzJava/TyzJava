@@ -19,4 +19,12 @@ public class BasicLinage {
         double m = r - n;
         return (int) (m * 1000) + (double) n / 1000;
     }
+
+    public static String conversionToHorse(int seconds) {
+        int minutes = seconds / 60;
+        seconds %= 60;
+        int horses = minutes / 60;
+        minutes %= 60;
+        return horses + "ч " + minutes + "мин " + seconds + "с";
+    }
 }
