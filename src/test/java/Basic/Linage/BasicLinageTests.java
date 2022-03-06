@@ -40,4 +40,29 @@ public class BasicLinageTests {
         String actual = BasicLinage.conversionToHorse(123456);
         Assertions.assertEquals("34ч 17мин 36с", actual);
     }
+
+    @Test
+    public void definesBelongingShouldReturnFalseWhenXAndYAreGreaterThanTheGivenRange() {
+        Assertions.assertFalse(BasicLinage.definesBelonging(3, 5));
+    }
+
+    @Test
+    public void definesBelongingShouldReturnFalseWhenXAreGreaterThanTheGivenRange() {
+        Assertions.assertFalse(BasicLinage.definesBelonging(3, 3));
+    }
+
+    @Test
+    public void definesBelongingShouldReturnFalseWhenYAreGreaterThanTheGivenRange() {
+        Assertions.assertFalse(BasicLinage.definesBelonging(1, 5));
+    }
+
+    @Test
+    public void definesBelongingShouldReturnTrueWhenXAndYAreEqualsThanTheGivenRange() {
+        Assertions.assertTrue(BasicLinage.definesBelonging(1, 3));
+    }
+
+    @Test
+    public void definesBelongingShouldReturnFalseWhenXIsGreaterAndYLessThanTheGivenRange() {
+        Assertions.assertFalse(BasicLinage.definesBelonging(3, -4));
+    }
 }

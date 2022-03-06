@@ -84,13 +84,27 @@ public class BasicLinage {
         minutes %= 60;
         return horses + "ч " + minutes + "мин " + seconds + "с";
     }
-    /*
-    № 6.
-    Для данной области составить линейную программу, которая печатает true, если точка
-    с координатами (x, y) принадлежит к закреплённой области, и false - в противном случае.
-    y = [3, 0) => x = [-4, 4]
-    y = [0, 4] => x = [-2, 2]
+
+    /**
+     * № 6.
+     * Для данной области составить линейную программу, которая печатает true, если точка
+     * с координатами (x, y) принадлежит к закреплённой области, и false - в противном случае.
+     * y = [-3, 0) => x = [-4, 4]
+     * y = [0, 4] => x = [-2, 2]
+     *
+     * @param x abscissa
+     * @param y ordinate
+     * @return true if the coordinate belongs to the specified region, false if it does not
+     * @cpu O(1)
+     * @ram O(1)
      */
-
-
+    public static boolean definesBelonging(double x, double y) {
+        if (y < -3 || y > 4) {
+            return false;
+        } else if (y >= -3 && y < 0 && (x < -4 || x > 4)) {
+            return false;
+        } else {
+            return !(x < -2) && !(x > 2);
+        }
+    }
 }
