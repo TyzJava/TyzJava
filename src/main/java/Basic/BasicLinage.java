@@ -1,4 +1,4 @@
-package Basic.Linage;
+package Basic;
 
 /**
  * 1. Basic of software code development
