@@ -54,17 +54,34 @@ public class BasicCycles {
     }
 
     /**
+     * № 3.
      * Найти сумму квадратов первых ста чисел.
      *
      * @return sum of Squares of the first hundred digits
      * @cpu O(1)
      * @ram O(1)
      */
-    public static int sumOfSquaresOfTheFirstHundredDigits() {
+    public static int sumSquares() {
         int sum = 1;
         for (int i = 2; i <= 100; i++) {
             sum += Math.pow(i, 2);
         }
         return sum;
+    }
+
+    /**
+     * № 4.
+     * Составить программу нахождения произведения квадратов первых двухсот чисел.
+     *
+     * @return product of squares of the first two hundred digits
+     * @cpu O(1)
+     * @ram O(1)
+     */
+    public static int productSquares() {
+        int product = 1;
+        for (int i = 2; i <= 200; i++) {
+            product += Math.pow(i, 2);
+        }
+        return product;
     }
 }

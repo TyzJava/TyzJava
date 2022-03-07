@@ -23,7 +23,12 @@ public class BasicCyclesTests {
     }
 
     @Test
-    public void sumOfSquaresOfTheFirstHundredDigitsShouldReturnThis() {
-        Assertions.assertEquals(338350, BasicCycles.sumOfSquaresOfTheFirstHundredDigits());
+    public void sumSquaresShouldReturnThis() {
+        Assertions.assertEquals(338350, BasicCycles.sumSquares());
+    }
+
+    @Test
+    public void productSquaresShouldReturn() {
+        Assertions.assertEquals(2686700, BasicCycles.productSquares());
     }
 }
