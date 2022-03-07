@@ -44,4 +44,19 @@ public class BasicBranchingTests {
     public void positionLineShouldReturnFalseWhenPointsAreNotLieOnTheSameLine() {
         Assertions.assertFalse(BasicBranching.positionLine(-6, -3, -3, -1, 3, 1));
     }
+
+    @Test
+    public void brickPassingShouldReturnTrueWhenXAndYSmallerHole() {
+        Assertions.assertTrue(BasicBranching.brickPassing(4, 5, 3, 4,8));
+    }
+
+    @Test
+    public void brickPassingShouldReturnTrueWhenYAndZSmallerHole() {
+        Assertions.assertTrue(BasicBranching.brickPassing(4, 5, 8, 4,3));
+    }
+
+    @Test
+    public void brickPassingShouldReturnFalseWhenTwoSidesLargerHoles() {
+        Assertions.assertFalse(BasicBranching.brickPassing(4, 5, 8, 4, 9));
+    }
 }
