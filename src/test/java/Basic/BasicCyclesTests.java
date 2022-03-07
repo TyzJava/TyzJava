@@ -14,4 +14,11 @@ public class BasicCyclesTests {
     public void calcFactorialShouldCalculatorFactorialWhenXIsValue() {
         Assertions.assertEquals(6, BasicCycles.calcFactorial(3));
     }
+
+    @Test
+    public void calcValuesOnSegmentShouldReturnValuesWhenSegmentAndStepAreGiven() {
+        double[] actual = BasicCycles.calcValuesOnSegment(-3, 10, 4);
+        double[] expected = new double[] {3, -1, 5, 9};
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
