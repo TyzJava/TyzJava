@@ -36,4 +36,11 @@ public class BasicCyclesTests {
     public void sumMembersShouldReturnSumWhenNumberOfMembersAndEIsIt() {
         Assertions.assertEquals(0.8333333333333333, BasicCycles.sumMembers(5, 0.4));
     }
+
+    @Test
+    public void intWithCharShouldReturnIntegerValuesOfCharsWhenThereIsALine() {
+        int[] actual = BasicCycles.intWithChar("Hello");
+        int[] expected = new int[] {72, 101, 108, 108, 111};
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }

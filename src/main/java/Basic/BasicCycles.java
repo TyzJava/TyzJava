@@ -107,4 +107,20 @@ public class BasicCycles {
         }
         return sum;
     }
+    /**
+     * № 6.
+     * Вывести на экран соответсвий между символами и их численными обозначениями в памяти компьютера
+     *
+     * @param chars string whose characters are to be converted into a numeric expression
+     * @return values of chars
+     * @cpu O(n), n - length of string
+     * @ram O(n), n - length of string
+     */
+    public static int[] intWithChar(String chars) {
+        int[] array = new int[chars.length()];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = chars.charAt(i);
+        }
+        return array;
+    }
 }
