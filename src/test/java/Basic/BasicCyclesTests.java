@@ -21,4 +21,9 @@ public class BasicCyclesTests {
         double[] expected = new double[] {3, -1, 5, 9};
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void sumOfSquaresOfTheFirstHundredDigitsShouldReturnThis() {
+        Assertions.assertEquals(338350, BasicCycles.sumOfSquaresOfTheFirstHundredDigits());
+    }
 }

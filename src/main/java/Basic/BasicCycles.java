@@ -52,4 +52,19 @@ public class BasicCycles {
         }
         return values;
     }
+
+    /**
+     * Найти сумму квадратов первых ста чисел.
+     *
+     * @return sum of Squares of the first hundred digits
+     * @cpu O(1)
+     * @ram O(1)
+     */
+    public static int sumOfSquaresOfTheFirstHundredDigits() {
+        int sum = 1;
+        for (int i = 2; i <= 100; i++) {
+            sum += Math.pow(i, 2);
+        }
+        return sum;
+    }
 }
