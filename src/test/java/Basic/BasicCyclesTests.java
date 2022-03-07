@@ -31,4 +31,9 @@ public class BasicCyclesTests {
     public void productSquaresShouldReturn() {
         Assertions.assertEquals(2686700, BasicCycles.productSquares());
     }
+
+    @Test
+    public void sumMembersShouldReturnSumWhenNumberOfMembersAndEIsIt() {
+        Assertions.assertEquals(0.8333333333333333, BasicCycles.sumMembers(5, 0.4));
+    }
 }

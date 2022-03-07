@@ -84,4 +84,27 @@ public class BasicCycles {
         }
         return product;
     }
+
+    /**
+     * № 5.
+     * Даны числовой ряд и некоторое число e. Найти сумму тех членов ряда, модуль которых больше
+     * или равен заданному e. Общий член ряда:
+     * a(n) = 1 / 2^n + 1 / 3^n
+     *
+     * @param n number of members
+     * @param e number by which the moduli of the members of the series are equal
+     * @return sum of members
+     * @cpu O(n), n - number of member
+     * @ram O(1)
+     */
+    public static double sumMembers(int n, double e) {
+        double sum = 0;
+        for (int i = 1; i <= n; i++) {
+            double member = 1 / Math.pow(2, i) + 1 / Math.pow(3, i);
+            if (Math.abs(member) >= e) {
+                sum += member;
+            }
+        }
+        return sum;
+    }
 }
