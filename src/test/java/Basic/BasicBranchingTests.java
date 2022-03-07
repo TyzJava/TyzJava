@@ -59,4 +59,19 @@ public class BasicBranchingTests {
     public void brickPassingShouldReturnFalseWhenTwoSidesLargerHoles() {
         Assertions.assertFalse(BasicBranching.brickPassing(4, 5, 8, 4, 9));
     }
+
+    @Test
+    public void functionValueShouldReturnValueOfFunctionWhenXLessThanThree() {
+        Assertions.assertEquals(7, BasicBranching.functionValue(2));
+    }
+
+    @Test
+    public void functionValueShouldReturnValueOfFunctionWhenXMoreThanThree() {
+        Assertions.assertEquals(0.014285714285714285, BasicBranching.functionValue(4));
+    }
+
+    @Test
+    public void functionValueShouldReturnValueOfFunctionWhenXEqualsThree() {
+        Assertions.assertEquals(9, BasicBranching.functionValue(3));
+    }
 }

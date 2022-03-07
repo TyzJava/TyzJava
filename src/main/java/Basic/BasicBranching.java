@@ -82,12 +82,23 @@ public class BasicBranching {
     public static boolean brickPassing(double A, double B, double x, double y, double z) {
         return A > x && B > y || A > x && B > z || A > y && B > x || A > y && B > z || A > z && B > x || A > z && B > y;
     }
-/*
+
     /**
      * № 5.
      * Вычислить значение функции:
      * F(x) = x^2 - 3x + 9, если x <= 3,
      * F(x) = 1 / (x^3 + 6), если x > 3;
+     * @param x argument
+     * @return value of function
+     * @cpu O(1)
+     * @ram O(1)
      */
-    
+    public static double functionValue(double x) {
+        if (x <= 3) {
+            return Math.pow(x, 2) - 3 * x + 9;
+        } else {
+            return 1 / (Math.pow(x, 3) + 6);
+        }
+    }
+
 }
